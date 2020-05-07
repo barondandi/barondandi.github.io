@@ -5,7 +5,7 @@ title: OpenMediaVault Installation (Including unsupported and not recommended)
 
 > Procedures to do an OpenMediaVault installation including procedures both unsupported (on a RAID protected filesystem and sharing OS space with data) and not recommended (using and USB flash drive).
 
-![](https://raw.githubusercontent.com/barondandi/install-omv/images/omv_logo.png)
+![](https://github.com/barondandi/install-omv/blob/master/images/omv_logo.png)
 
 OpenMediaVault is available at  [https://www.openmediavault.org/](https://www.openmediavault.org/) and installation procedure at [https://openmediavault.readthedocs.io/en/5.x/installation/index.html](https://openmediavault.readthedocs.io/en/5.x/installation/index.html).
 
@@ -110,21 +110,21 @@ shutdown -h now
 ```
 Now we plug the USB drive onto a linux system and use GParted over it to reduce the OS partition size. I will be leaving it at 8Gb, as it is more than enough and leave space to expand afterwards. This way the OS partition to backup will be smaller and take less time and space.
 
-![GParted: Original Layout](https://raw.githubusercontent.com/barondandi/install-omv/images/gparted_1.png)
+![GParted: Original Layout](https://github.com/barondandi/install-omv/blob/master/images/gparted_1.png)
 
 -   We right click and Unmount the /dev/sdx2 partition.
 -   We can now resize it to the desired amount (I used 8192GiB)
 
-![GParted: Resize](https://raw.githubusercontent.com/barondandi/install-omv/images/gparted_2.png)
+![GParted: Resize](https://github.com/barondandi/install-omv/blob/master/images/gparted_2.png)
 
 -   And apply the changes before leaving GParted
 
-![](https://raw.githubusercontent.com/barondandi/install-omv/images/gparted_4.png)
-![GParted: Apply changes](https://raw.githubusercontent.com/barondandi/install-omv/images/gparted_5.png)
+![](https://github.com/barondandi/install-omv/blob/master/images/gparted_4.png)
+![GParted: Apply changes](https://github.com/barondandi/install-omv/blob/master/images/gparted_5.png)
 
 -   We eject the USB drive and plug it back on the NAS. We boot again and see what happens. If there are no issues, we log on to the GUI and check that the filesystems are fine:
 
-![GParted: Final Layout](https://raw.githubusercontent.com/barondandi/install-omv/images/gparted_6.png)
+![GParted: Final Layout](https://github.com/barondandi/install-omv/blob/master/images/gparted_6.png)
 
 -   First we go to System \ Update Management and we apply the available updates.
 -   Then we go to System \ Date and Time and enable NTP service after specifiying the timezone.
@@ -132,7 +132,7 @@ Now we plug the USB drive onto a linux system and use GParted over it to reduce 
 
 - To make it easier to power down the system, go to System \ Power button, and change it to "Shutdown" so that we can power down the NAS without any monitor and keyboard.
 
-![Power button](https://raw.githubusercontent.com/barondandi/install-omv/images/power-button.png)
+![Power button](https://github.com/barondandi/install-omv/blob/master/images/power-button.png)
 
 
 ## 3. USB Flash Drive installation
